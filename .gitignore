@@ -1,0 +1,11 @@
+# dependencies
+/vendor/
+/composer.lock
+
+# production
+*/**/build/
+*/**/dist/
+
+# misc
+/.idea/
+/log/
