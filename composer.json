@@ -1,32 +1,12 @@
 {
     "name": "lo7su/php-sdk-umc-temp",
-    "description": "PHP library for the typical BIT-UMC SOAP API",
-    "keywords": [
-        "Bit-Umc",
-        "PHP",
-        "SOAP",
-        "API"
-    ],
-    "type": "library",
-    "license": "MIT",
-    "homepage": "https://github.com/lo7su/php-sdk-umc-temp/",
+    "description": "A short description of what your package does",
     "autoload": {
         "psr-4": {
             "ANZ\\BitUmc\\SDK\\": "src/"
         }
     },
-    "authors": [
-        {
-            "name": "Alexey Nazarov",
-            "email": "jc1988x@gmail.com",
-            "homepage": "https://github.com/alex-nzr"
-        }
-    ],
     "require": {
-        "php": ">=7.4",
-        "ext-soap": "*",
-        "ext-simplexml": "*",
-        "ext-json": "*",
-        "psr/log": "3.0"
+        "php": ">=7.4"
     }
 }
