@@ -111,10 +111,10 @@ class XmlParser
                 $specialtyUid  = $this->getSpecialtyUid($specialtyName);
 
                 $employee['uid']          = $uid;
-                $employee['name']         = $item[$nameKey];
-                $employee['surname']      = $item[$lastNameKey];
-                $employee['middleName']   = $item[$middleNameKey];
-                $employee['fullName']     = $item[$lastNameKey] ." ". $item[$nameKey] ." ". $item[$middleNameKey];
+                $employee['name']         = trim($item[$nameKey]);
+                $employee['surname']      = trim($item[$lastNameKey]);
+                $employee['middleName']   = trim($item[$middleNameKey]);
+                $employee['fullName']     = trim($item[$lastNameKey]) ." ". trim($item[$nameKey]) ." ". trim($item[$middleNameKey]);
                 $employee['clinicUid']    = $clinicUid;
                 $employee['photo']        = $item[$photoKey];
                 $employee['description']  = !empty($item[$descriptionKey]) ? $item[$descriptionKey] : '';
