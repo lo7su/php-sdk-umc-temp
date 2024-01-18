@@ -126,7 +126,7 @@ class XmlParser
 
                 if (is_array($item[$servicesKey][$oneServiceKey]))
                 {
-                    foreach ($item[$servicesKey] as $service)
+                    foreach ($item[$servicesKey][$oneServiceKey] as $service)
                     {
                         if (!empty($service['UID']))
                         {
