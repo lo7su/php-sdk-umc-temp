@@ -96,42 +96,6 @@ class SoapClient extends \SoapClient
      */
     private function handleXML(string $soapMethod, SimpleXMLElement $xml): array
     {
-
-
-
-
-        
-$urlDeal = '195.98.68.114:8083/UMC_U/ws/ws1.1cws?wsdl';
-
-$curl = curl_init($urlDeal);
-$queryData = http_build_query(
-
-
-    array(
-        "halt"=>0,
-        "cmd" => 50
-    )
-);
-
-
-
-curl_setopt_array($curl, [
-    CURLOPT_URL => $urlDeal,
-    CURLOPT_SSL_VERIFYPEER => 0,
-    CURLOPT_POST => 1,
-    CURLOPT_HEADER => 0,
-    CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_POSTFIELDS => $queryData
-]);
-
-$response = json_decode(curl_exec($curl), true);
-
-if ($error = curl_error($curl)) {
-    throw new Exception($error);
-}
-curl_close($curl);
-
-
         $parser = XmlParser::getInstance();
         switch ($soapMethod)
         {
